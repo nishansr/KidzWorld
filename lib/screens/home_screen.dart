@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:kidzworld/widgets/card.dart';
 
+import '../sections/trace_and_draw.dart';
 import '../widgets/carousel_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -82,32 +83,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Wrap(
-                spacing: 10,
-                runSpacing: 10,
-                children: [
-                  CustomCard(
-                      title: 'Digits',
-                      img: "assets/one.png",
-                      color: Colors.orange),
-                  CustomCard(
-                      title: 'Letters',
-                      img: "assets/A.png",
-                      color: Colors.green),
-                  CustomCard(
-                      title: 'Custom Letter',
-                      img: "assets/custom.png",
-                      color: Colors.blue),
-                  CustomCard(
-                      title: 'Drawing',
-                      img: "assets/drawing.png",
-                      color: Colors.yellow),
-                  CustomCard(
-                      title: 'Homework',
-                      img: "assets/book.png",
-                      color: Color(0xff991E4F))
-                ],
-              )
+              Division(),
             ],
           ),
         ),
