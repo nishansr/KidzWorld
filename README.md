@@ -1,4 +1,4 @@
-# kidzworld
+# Kidzworld
 
 A new Flutter project.
 
