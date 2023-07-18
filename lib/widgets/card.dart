@@ -17,7 +17,7 @@ class CustomCard extends StatelessWidget {
           BoxDecoration(color: color, borderRadius: BorderRadius.circular(3.0)),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Image.asset(img, height: 40),
-        SizedBox(height: 5),
+        SizedBox(height: 10),
         Text(
           title,
           style: TextStyle(
