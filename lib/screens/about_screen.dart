@@ -21,8 +21,7 @@ class _AboutState extends State<About> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Padding(
+    return Padding(
       padding: const EdgeInsets.all(15.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -77,6 +76,6 @@ class _AboutState extends State<About> {
           ])
         ],
       ),
-    ));
+    );
   }
 }

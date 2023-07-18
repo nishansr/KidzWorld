@@ -1,7 +1,10 @@
+//ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:kidzworld/provider/providers.dart';
 import 'package:kidzworld/screens/about_screen.dart';
+import 'package:kidzworld/screens/fun_screen.dart';
 import 'package:kidzworld/screens/home_screen.dart';
+import 'package:kidzworld/screens/learn_screen.dart';
 import 'package:kidzworld/widgets/bottom_nav.dart';
 import 'package:provider/provider.dart';
 
@@ -13,8 +16,8 @@ class MyApp extends StatelessWidget {
   MyApp({super.key});
   final List<Widget> _screens = [
     HomeScreen(),
-    HomeScreen(),
-    HomeScreen(),
+    Learn(),
+    Fun(),
     About(),
   ];
   @override

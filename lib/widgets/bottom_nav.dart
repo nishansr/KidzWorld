@@ -29,8 +29,8 @@ class _BottomNavState extends State<BottomNav> {
             backgroundColor: Color(0xff991E4F),
             tabs: [
               GButton(icon: Icons.home, text: 'Home'),
-              GButton(icon: Icons.school, text: 'Study'),
-              GButton(icon: Icons.games, text: 'Games'),
+              GButton(icon: Icons.school, text: 'Learn'),
+              GButton(icon: Icons.games, text: 'Fun'),
               GButton(icon: Icons.info, text: 'About'),
             ],
           ),
