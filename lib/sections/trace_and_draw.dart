@@ -10,6 +10,7 @@ class Division extends StatefulWidget {
 }
 
 class _DivisionState extends State<Division> {
+  int currentindex = 0;
   @override
   Widget build(BuildContext context) {
     return Wrap(
