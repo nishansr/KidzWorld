@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kidzworld/widgets/card.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import 'info_screen.dart';
 
 class About extends StatefulWidget {
@@ -11,6 +11,14 @@ class About extends StatefulWidget {
 }
 
 class _AboutState extends State<About> {
+  Future<void> launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -55,10 +63,17 @@ class _AboutState extends State<About> {
                   color: Color(0xff991E4F)),
             ),
             SizedBox(width: 10),
-            CustomCard(
-                title: "Privacy Policy",
-                img: "assets/privacy.png",
-                color: Colors.green),
+            InkWell(
+              onTap: () {
+                const url =
+                    'https://bprabin811.github.io/kidzworld-privacy-policy/';
+                launchURL(url);
+              },
+              child: CustomCard(
+                  title: "Privacy Policy",
+                  img: "assets/privacy.png",
+                  color: Colors.green),
+            ),
           ])
         ],
       ),
