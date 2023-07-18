@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:kidzworld/widgets/card.dart';
-
 import '../sections/trace_and_draw.dart';
-import '../widgets/bottom_nav.dart';
 import '../widgets/carousel_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,7 +7,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final h = MediaQuery.of(context).size.height;
     final w = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.all(15.0),

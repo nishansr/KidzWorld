@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kidzworld/provider/providers.dart';
 import 'package:kidzworld/screens/about_screen.dart';
-import 'package:kidzworld/screens/drawing_screen.dart';
 import 'package:kidzworld/screens/home_screen.dart';
 import 'package:kidzworld/widgets/bottom_nav.dart';
 import 'package:provider/provider.dart';
@@ -12,13 +11,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-  @override
-  List<Widget> _screens = [
+  final List<Widget> _screens = [
     HomeScreen(),
     HomeScreen(),
     HomeScreen(),
     About(),
   ];
+  @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
