@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+//ignore_for_file: prefer_const_constructors
 
 class CarouselCard extends StatelessWidget {
-  final title;
-  final img;
+  final String title;
+  final String img;
   const CarouselCard({super.key, required this.title, required this.img});
 
   @override

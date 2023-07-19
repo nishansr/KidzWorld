@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:kidzworld/provider/providers.dart';
 import 'package:provider/provider.dart';
+//ignore_for_file: prefer_const_constructors
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -27,7 +28,7 @@ class _BottomNavState extends State<BottomNav> {
             tabBackgroundColor: const Color.fromARGB(97, 255, 255, 255),
             gap: 8,
             backgroundColor: Color(0xff991E4F),
-            tabs: [
+            tabs: const [
               GButton(icon: Icons.home, text: 'Home'),
               GButton(icon: Icons.school, text: 'Learn'),
               GButton(icon: Icons.games, text: 'Fun'),

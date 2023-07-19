@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../sections/trace_and_draw.dart';
 import '../widgets/carousel_card.dart';
+//ignore_for_file: prefer_const_constructors
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

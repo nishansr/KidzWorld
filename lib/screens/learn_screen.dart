@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//ignore_for_file: prefer_const_constructors
 import '../widgets/card.dart';
 
 class Learn extends StatefulWidget {
@@ -41,7 +41,7 @@ class _LearnState extends State<Learn> {
           Wrap(
             spacing: 10,
             runSpacing: 10,
-            children: [
+            children: const [
               CustomCard(
                   title: 'Learn Digits',
                   img: "assets/one.png",

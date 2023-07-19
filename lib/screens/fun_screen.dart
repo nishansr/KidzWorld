@@ -1,5 +1,5 @@
+//ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-
 import '../widgets/card.dart';
 
 class Fun extends StatelessWidget {
@@ -36,7 +36,7 @@ class Fun extends StatelessWidget {
           Wrap(
             spacing: 10,
             runSpacing: 10,
-            children: [
+            children: const [
               CustomCard(
                   title: 'Math Game',
                   img: "assets/one.png",

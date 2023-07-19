@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+//ignore_for_file: prefer_const_constructors
 
 class CustomCard extends StatelessWidget {
-  final title;
-  final img;
-  final color;
+  final String title;
+  final String img;
+  final Color color;
   const CustomCard(
       {super.key, required this.title, required this.img, required this.color});
 

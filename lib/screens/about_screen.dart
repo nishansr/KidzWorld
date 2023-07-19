@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kidzworld/widgets/card.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'info_screen.dart';
+//ignore_for_file: prefer_const_constructors
 
 class About extends StatefulWidget {
   const About({super.key});

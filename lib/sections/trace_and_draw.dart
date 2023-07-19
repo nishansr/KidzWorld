@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kidzworld/screens/drawing_screen.dart';
+import '../screens/digits.dart';
+import '../screens/drawing_screen.dart';
 import '../widgets/card.dart';
 
 class Division extends StatefulWidget {
@@ -17,8 +18,16 @@ class _DivisionState extends State<Division> {
       spacing: 10,
       runSpacing: 10,
       children: [
-        CustomCard(
-            title: 'Digits', img: "assets/one.png", color: Colors.orange),
+        InkWell(
+          onTap: () {
+            setState(() {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: ((context) => Digits())));
+            });
+          },
+          child: CustomCard(
+              title: 'Digits', img: "assets/one.png", color: Colors.orange),
+        ),
         CustomCard(title: 'Letters', img: "assets/A.png", color: Colors.green),
         CustomCard(
             title: 'Custom Letter',
