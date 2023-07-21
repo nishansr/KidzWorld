@@ -1,6 +1,5 @@
 import 'package:flutter_drawing_board/flutter_drawing_board.dart';
 import 'package:flutter/material.dart';
-import 'package:kidzworld/widgets/small_card.dart';
 //ignore_for_file: prefer_const_constructors
 
 class Digits extends StatefulWidget {

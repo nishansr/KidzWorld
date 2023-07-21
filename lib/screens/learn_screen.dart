@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidzworld/screens/vehicles.dart';
 //ignore_for_file: prefer_const_constructors
 import '../widgets/card.dart';
 
@@ -41,7 +42,7 @@ class _LearnState extends State<Learn> {
           Wrap(
             spacing: 10,
             runSpacing: 10,
-            children: const [
+            children: [
               CustomCard(
                   title: 'Learn Digits',
                   img: "assets/one.png",
@@ -72,10 +73,18 @@ class _LearnState extends State<Learn> {
                   title: 'Fruts And\nVegetables',
                   img: "assets/drawing.png",
                   color: Colors.yellow),
-              CustomCard(
-                  title: 'Vehicles',
-                  img: "assets/book.png",
-                  color: Color(0xff991E4F)),
+              InkWell(
+                onTap: () {
+                  setState(() {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: ((context) => Vehicles())));
+                  });
+                },
+                child: CustomCard(
+                    title: 'Vehicles',
+                    img: "assets/book.png",
+                    color: Color(0xff991E4F)),
+              ),
               CustomCard(
                   title: 'Others',
                   img: "assets/book.png",

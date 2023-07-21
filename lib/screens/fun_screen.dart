@@ -2,9 +2,14 @@
 import 'package:flutter/material.dart';
 import '../widgets/card.dart';
 
-class Fun extends StatelessWidget {
+class Fun extends StatefulWidget {
   const Fun({super.key});
 
+  @override
+  State<Fun> createState() => _FunState();
+}
+
+class _FunState extends State<Fun> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,7 +29,7 @@ class Fun extends StatelessWidget {
               ),
             ),
             child: Text(
-              'Learn                        ',
+              'Play                          ',
               style: TextStyle(
                 color: Color(0xff991E4F),
                 fontSize: 26,
