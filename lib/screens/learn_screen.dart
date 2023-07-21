@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidzworld/screens/birds.dart';
 import 'package:kidzworld/screens/vehicles.dart';
 //ignore_for_file: prefer_const_constructors
 import '../widgets/card.dart';
@@ -67,8 +68,17 @@ class _LearnState extends State<Learn> {
                   title: 'Table', img: "assets/one.png", color: Colors.orange),
               CustomCard(
                   title: 'Animals', img: "assets/A.png", color: Colors.green),
-              CustomCard(
-                  title: 'Birds', img: "assets/custom.png", color: Colors.blue),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: ((context) => Birds())),
+                  );
+                },
+                child: CustomCard(
+                    title: 'Birds',
+                    img: "assets/custom.png",
+                    color: Colors.blue),
+              ),
               CustomCard(
                   title: 'Fruts And\nVegetables',
                   img: "assets/drawing.png",
