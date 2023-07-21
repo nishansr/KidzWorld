@@ -1,10 +1,18 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-class Vehicles extends StatelessWidget {
+class Vehicles extends StatefulWidget {
   const Vehicles({super.key});
 
   @override
+  State<Vehicles> createState() => _VehiclesState();
+}
+
+class _VehiclesState extends State<Vehicles> {
+  @override
   Widget build(BuildContext context) {
+    final player = AudioPlayer();
+
     List<String> vehicle = [
       'Car 1',
       'Car 2',
@@ -46,25 +54,32 @@ class Vehicles extends StatelessWidget {
         itemBuilder: ((context, index) {
           return Padding(
             padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: w / 5,
-              width: w / 7,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15.0),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.black,
-                        offset: Offset(0, 5),
-                        spreadRadius: 5,
-                        blurRadius: 3)
-                  ]),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text(vehicle[index], style: TextStyle(fontSize: 30)),
-                  Image.asset(vehicle_img[index], height: 50),
-                ],
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  player.play(AssetSource("assets/bird.wav"));
+                });
+              },
+              child: Container(
+                height: w / 5,
+                width: w / 7,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15.0),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black,
+                          offset: Offset(0, 5),
+                          spreadRadius: 5,
+                          blurRadius: 3)
+                    ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text(vehicle[index], style: TextStyle(fontSize: 30)),
+                    Image.asset(vehicle_img[index], height: 50),
+                  ],
+                ),
               ),
             ),
           );
